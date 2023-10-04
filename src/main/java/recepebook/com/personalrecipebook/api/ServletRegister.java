@@ -11,7 +11,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "ServletRegister", value = "/ServletRegister")
+@WebServlet(name = "ServletRegister", value = "/api/v1/register")
 public class ServletRegister extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -37,9 +37,8 @@ public class ServletRegister extends HttpServlet {
         Gson gson = gsonBuilder.create();
 
         try {
-            if (names == null || names.length() == 0) {
-                message = "fill your names";
-            } else if (email == null || email.length() == 0) {
+
+            if (email == null || email.length() == 0) {
                 message = "email is required";
             } else if (password == null || password.length() == 0) {
                 message = "password is required";

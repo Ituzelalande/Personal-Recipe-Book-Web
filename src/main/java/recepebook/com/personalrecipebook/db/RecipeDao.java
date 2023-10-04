@@ -48,7 +48,7 @@ public class RecipeDao {
         return recipe;
     }
 
-    public boolean updateRecipe(String ingredients, String user_id) throws SQLException, ClassNotFoundException {
+    public boolean updateRecipe(String ingredients, String user_id,String id) throws SQLException, ClassNotFoundException {
         boolean isUpdated=false;
 
         Statement statement = DatabaseUtils.getConnection().createStatement();
