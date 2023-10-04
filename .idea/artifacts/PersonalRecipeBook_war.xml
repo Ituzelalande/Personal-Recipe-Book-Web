@@ -1,14 +1,14 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="Personal Recipe Book:war">
+  <artifact type="war" name="PersonalRecipeBook:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <properties id="maven-jee-properties">
       <options>
-        <module>Personal Recipe Book</module>
+        <module>PersonalRecipeBook</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="archive" name="PersonalRecipeBook-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="Personal Recipe Book:war exploded" />
+      <element id="artifact" artifact-name="PersonalRecipeBook:war exploded" />
     </root>
   </artifact>
 </component>

@@ -112,6 +112,7 @@ public class ServletRecipe extends HttpServlet {
         boolean success = false;
         String ingredients = request.getParameter("ingredients");
         String user_id = request.getParameter("user_id");
+        String id = request.getParameter("ingredient_id");
 
 
         JsonObject jsonData = new JsonObject();
@@ -129,7 +130,7 @@ public class ServletRecipe extends HttpServlet {
            }else {
 
                RecipeDao recipeDao = new RecipeDao();
-               boolean isUpdated= recipeDao.updateRecipe(ingredients,user_id);
+               boolean isUpdated= recipeDao.updateRecipe(ingredients,user_id, id);
 
                if(isUpdated){
                   message = "you updated your recipe";
